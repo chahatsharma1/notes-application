@@ -1,0 +1,53 @@
+# =======================================================
+# Java / Spring Boot Specific
+# =======================================================
+
+# Compiled class files
+*.class
+
+# Build Tool folders
+/target/
+/build/
+.gradle
+
+# Ignore PRODUCTION properties file
+# This ensures your production database credentials and keys are not committed
+application-prod.properties
+application-production.properties
+
+# Log files
+*.log
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# =======================================================
+# Frontend Specific (for frontend/ folder at the root)
+# =======================================================
+
+# Dependencies
+frontend/node_modules
+
+# Build output
+frontend/dist
+frontend/build
+frontend/.vite
+
+# Ignore PRODUCTION environment variables for the frontend
+frontend/.env.production
+frontend/.env.production.local
+
+# =======================================================
+# OS Generated Files
+# =======================================================
+
+# OS files
+.DS_Store
+Thumbs.db
+
