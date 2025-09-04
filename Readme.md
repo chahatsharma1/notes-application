@@ -4,10 +4,12 @@ A simple, secure, and collaborative notes application built with modern technolo
 This application allows users to **create, read, update, and delete** their private notes,  
 with the added functionality of **sharing notes via a unique, view-only link**.
 
+![Image](/frontend/public/img3.png)
 ---
 ## 🚀 Live Demo
 
 👉 [View the Live App](https://notes-application-eta.vercel.app/)
+
 
 ![Image](/frontend/public/img.png)
 
