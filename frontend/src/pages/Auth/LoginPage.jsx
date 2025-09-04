@@ -16,7 +16,6 @@ export const LoginPage = () => {
     };
 
     useEffect(() => {
-        console.log(jwt);
         if (jwt) {
             navigate('/notes');
         }
@@ -32,6 +31,9 @@ export const LoginPage = () => {
                     </svg>
                     <h1 className="text-3xl font-bold text-[var(--color-card-foreground)] mt-2">Welcome Back!</h1>
                     <p className="text-[var(--color-muted-foreground)]">Sign in to access your notes.</p>
+                    <p className="text-sm text-center text-[var(--color-muted-foreground)] bg-[var(--color-muted)]/10 rounded-md py-2 px-3 mt-4">
+                        Use <span className="font-medium">demo@gmail.com</span> and <span className="font-medium">demo123</span> to demo the app.
+                    </p>
                 </div>
 
                 <form onSubmit={handleLogin} className="space-y-6">
@@ -97,4 +99,3 @@ export const LoginPage = () => {
 };
 
 export default LoginPage;
-

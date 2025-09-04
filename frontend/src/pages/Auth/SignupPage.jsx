@@ -46,21 +46,29 @@ const SignupPage = () => {
             const timer = setTimeout(() => {
                 navigate("/login");
             }, 2000);
-
             return () => clearTimeout(timer);
         }
     }, [registerSuccess, navigate]);
-
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-[var(--color-background)] font-[var(--font-outfit)] px-4">
             <div className="w-full max-w-md p-8 space-y-6 bg-[var(--color-card)] rounded-[var(--radius-xl)] border border-[var(--color-border)] shadow-lg">
                 <div className="text-center">
                     <div className="flex justify-center mx-auto mb-4 h-12 w-12 items-center rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
                     </div>
                     <h1 className="text-3xl font-bold text-[var(--color-card-foreground)]">Create an Account</h1>
                     <p className="text-[var(--color-muted-foreground)] mt-2">Start organizing your notes today.</p>
+                    <p className="text-sm text-center text-[var(--color-muted-foreground)] bg-[var(--color-muted)]/10 rounded-md py-2 px-3 mt-4">
+                        Use <span className="font-medium">demo@gmail.com</span> and <span className="font-medium">demo123</span> to demo the app.
+                    </p>
                 </div>
 
                 <form className="space-y-4" onSubmit={handleSubmit}>
