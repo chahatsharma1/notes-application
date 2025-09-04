@@ -5,6 +5,7 @@ const initialState = {
     loading: false,
     error: null,
     jwt: localStorage.getItem('jwt') || null,
+    registerSuccess: false,
 };
 
 export const authReducer = (state = initialState, action) => {
@@ -20,6 +21,7 @@ export const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
+                registerSuccess: true
             };
         case types.LOGIN_SUCCESS:
             return {

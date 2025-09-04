@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '@/state/user/Action.js';
+import toast from 'react-hot-toast';
 
 const Input = ({ id, type, placeholder, value, onChange }) => (
     <input
@@ -41,7 +42,12 @@ const SignupPage = () => {
 
     useEffect(() => {
         if (registerSuccess) {
-            navigate('/login');
+            toast.success("Account created successfully!");
+            const timer = setTimeout(() => {
+                navigate("/login");
+            }, 2000);
+
+            return () => clearTimeout(timer);
         }
     }, [registerSuccess, navigate]);
 
