@@ -5,6 +5,14 @@ This application allows users to **create, read, update, and delete** their priv
 with the added functionality of **sharing notes via a unique, view-only link**.
 
 ---
+## 🚀 Live Demo
+
+👉 [View the Live App](https://notes-application-eta.vercel.app/)
+
+![Image](/frontend/public/img.png)
+
+
+---
 
 ## ✨ Features
 
@@ -29,16 +37,6 @@ with the added functionality of **sharing notes via a unique, view-only link**.
 - 🧩 **shadcn/ui** – Beautiful, reusable React components built on Tailwind.
 
 ---
-
-## 🚀 Live Demo
-
-👉 [View the Live App](https://notes-application-eta.vercel.app/)
-
-![Image](/frontend/public/img.png)
-
-
----
-
 ## 🔧 Getting Started
 
 To run this project locally, ensure you have the following installed:
