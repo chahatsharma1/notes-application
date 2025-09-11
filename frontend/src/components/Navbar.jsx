@@ -73,7 +73,7 @@ export const Navbar = () => {
     const mobileGuestLinks = (
         <>
             {location.pathname !== '/signup' && (
-                <Button variant="ghost" className="w-full justify-start" asChild>
+                <Button className="w-full " asChild>
                     <Link to="/login" onClick={closeMenu}>Login</Link>
                 </Button>
             )}
@@ -92,7 +92,6 @@ export const Navbar = () => {
                     <Link to="/notes" onClick={closeMenu}>Dashboard</Link>
                 </Button>
             )}
-            {/* ## Change: Mobile Logout button only shows on the /notes page ## */}
             {location.pathname === '/notes' && (
                 <Button variant="ghost" className="w-full justify-start" onClick={handleLogout}>
                     Logout
@@ -112,7 +111,6 @@ export const Navbar = () => {
                         <span className="font-bold text-xl">NotesApp</span>
                     </Link>
 
-                    {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-2">
                         {jwt ? authLinks : guestLinks}
                         <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
@@ -121,22 +119,17 @@ export const Navbar = () => {
                         </Button>
                     </div>
 
-                    {/* Mobile Menu Button */}
                     <button
                         className="md:hidden p-2"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        aria-label="Toggle menu"
-                    >
+                        aria-label="Toggle menu">
                         {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                     </button>
                 </div>
 
-                {/* Mobile Menu */}
                 {isMenuOpen && (
                     <div className="md:hidden py-4 border-t border-border/50">
                         <div className="flex flex-col space-y-4">
-                            <a href="/#features" className="text-foreground hover:text-primary transition-colors px-4 py-2" onClick={closeMenu}>Features</a>
-                            <a href="/#pricing" className="text-foreground hover:text-primary transition-colors px-4 py-2" onClick={closeMenu}>Pricing</a>
                             <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-border/50">
                                 {jwt ? mobileAuthLinks : mobileGuestLinks}
                                 <Button variant="outline" className="w-full" onClick={toggleTheme}>

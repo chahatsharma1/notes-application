@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Sparkles, Edit3, Lock, Share2, Database, Zap, Shield, FileText, Github, Twitter, Linkedin, Play } from "lucide-react";
+import {ArrowRight, Sparkles, Edit3, Lock, Share2, Database, Zap, Shield, FileText} from "lucide-react";
 import {Link} from "react-router-dom";
+import {SocialIcon} from "react-social-icons";
 
 const features = [
     { icon: Edit3, title: "Full CRUD Operations", description: "Create, read, update, and delete notes with a seamless interface designed for productivity.", color: "text-blue-600" },
@@ -36,14 +37,15 @@ export const HomePage = () => {
                                 </p>
                             </div>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <Button variant="hero" size="lg" className="text-base px-8">
-                                    Get Started Free
-                                    <ArrowRight className="ml-2 h-5 w-5" />
-                                </Button>
-                                <Button variant="feature" size="lg" className="text-base px-8">
-                                    <Play className="mr-2 h-5 w-5" />
-                                    Watch Demo
-                                </Button>
+                                <Link to="/signup">
+                                    <Button
+                                        variant="hero"
+                                        size="lg"
+                                        className="text-base px-8 font-semibold text-[var(--primary-foreground)] bg-[var(--primary)] hover:bg-[oklch(0.55_0.15_39)] transition-colors duration-300">
+                                        Create Your First Note
+                                        <ArrowRight className="ml-2 h-5 w-5" />
+                                    </Button>
+                                </Link>
                             </div>
                             <div className="flex items-center gap-8 justify-center lg:justify-start text-sm text-muted-foreground">
                                 <div className="flex items-center gap-2">
@@ -134,7 +136,7 @@ export const HomePage = () => {
             </section>
 
             <footer className="bg-muted/30 border-t border-border/50">
-                <div className="container mx-auto px-4 py-12">
+                <div className="container mx-auto px-4 py-4">
                     <div className="flex justify-center text-center">
                         <div className="space-y-4">
                             <div className="flex items-center justify-center space-x-2">
@@ -147,20 +149,30 @@ export const HomePage = () => {
                                 Secure, simple, and shareable note-taking platform designed for modern productivity.
                             </p>
                             <div className="flex space-x-2 justify-center">
-                                <Link to="https://github.com/chahatsharma1" target="_blank" rel="noopener noreferrer">
-                                    <Button variant="ghost" size="icon" className="h-8 w-8">
-                                        <Github className="h-4 w-4" />
-                                    </Button>
-                                </Link>
-                                <Link to="https://www.linkedin.com/in/chahat10" target="_blank" rel="noopener noreferrer">
-                                    <Button variant="ghost" size="icon" className="h-8 w-8">
-                                        <Linkedin className="h-4 w-4" />
-                                    </Button>
-                                </Link>
+                                <SocialIcon
+                                    url="https://github.com/chahatsharma1"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    network="github"
+                                    className="h-8 w-8"
+                                    bgColor="transparent"
+                                    fgColor="var(--foreground)"
+                                    style={{ height: '45px', width: '45px' }}
+                                />
+                                <SocialIcon
+                                    url="https://www.linkedin.com/in/chahat10"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    network="linkedin"
+                                    className="h-8 w-8"
+                                    bgColor="transparent"
+                                    fgColor="var(--foreground)"
+                                    style={{ height: '45px', width: '45px' }}
+                                />
                             </div>
                         </div>
                     </div>
-                    <div className="border-t border-border/50 mt-8 pt-8 text-center text-sm text-muted-foreground">
+                    <div className="border-t border-border/50 mt-8 pt-4 text-center text-sm text-muted-foreground">
                         <p>&copy; 2025 NotesApp. All rights reserved. Built with ❤️ for productivity.</p>
                     </div>
                 </div>
@@ -170,3 +182,4 @@ export const HomePage = () => {
 };
 
 export default HomePage;
+
